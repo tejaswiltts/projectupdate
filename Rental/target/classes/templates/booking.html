@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>List Bookings</title>
+<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+</head>
+<body>
+<div class="container text-center" >
+<div><h1>Booking List</h1></div>
+<div>
+ <table class="table table-bordered">
+      <thead class="thead-dark">
+         <tr>
+       <th>ID</th>
+       <th>CAR ID</th>
+       <th>EMAIL ID</th>
+       <th>BOOKING DATE</th>
+       <th>MANY DAYS</th>
+       <th>STATUS</th>
+       </tr>
+       </thead>
+       <tbody>
+       <th:block th:each="booking : ${listBooking}">
+       <tr>
+       <td>[[$(booking.id)]]</td>
+       <td>[[$(booking.car_id)]]</td>
+       <td>[[$(booking.email_id)]]</td>
+       <td>[[$(booking.booking_date)]]</td>
+       <td>[[$(booking.many_days)]]</td>
+       <td>[[$(booking.status)]]</td>
+       </tr>
+       
+       
+       </tbody>
+
+
+
+
+
+</table>
+
+
+
+
+</div>
+
+</div>
+
+</body>
+</html>
